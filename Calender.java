@@ -55,14 +55,10 @@ public class Calender
 				}
 	 				 
  			}
-			else if(n==2)
-			{
-					 
-					GetAppointment(calender);
-			}
+			else if(n==2) 	GetAppointment(calender);
+		 
 			else if(n==3)
 			{
-				 
 				System.out.println("When was your appointment scheduled on:");
 				int date=Integer.parseInt(sc.nextLine());
 				if(Ispresent_Cancel(date,name))
@@ -78,7 +74,7 @@ public class Calender
 			System.out.println("Do You Want To Continue(y/n)");
 			if(sc.nextLine().equals("n"))
 			 {	
-				 System.out.println("\t\tThankyou");
+				 System.out.println("\nThankyou");
 				 cont=false;
 		    }
 	
@@ -183,8 +179,7 @@ static int pos=-10;
 				end=appointment;
 				return true;
 				}
-				else
-					return false;
+				else  	return false;
 			}
 		}
 		return false;
@@ -220,10 +215,8 @@ static int pos=-10;
 	{
 		try 
 		{
-			if((dates>0&&dates<=30))
-			{
-				return true;
-			}
+			if((dates>0&&dates<=30))    	return true;
+		 
 			else
 			{
 				System.out.println("Check the date for the corresponding month");
@@ -235,6 +228,6 @@ static int pos=-10;
 		{
 			System.out.println("Wrong Format of the date, Please enter the dates in the format DD->DD");
 		}
-			return false;
+		return false;
 	}
 }
